@@ -17,6 +17,7 @@ dependencies = [
   "pandas",
   "numpy",
   "scikit-learn",
+  "AMLRO @ git+https://github.com/RxnRover/amlro.git",
 ]
 
 [tool.black]
@@ -29,4 +30,4 @@ line_length = 80
 homepage = "https://github.com/your_repo"
 
 [project.scripts]
-amlro-app = "amlro_gui.__main__:main"
+amlro-app = "amlro_gui.run:run"

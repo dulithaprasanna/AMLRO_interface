@@ -24,12 +24,15 @@ for reference and as the last version built the original way.
 
 ## Running it
 
+```
 python -m venv venv
 venv\Scripts\pip install -e .
-venv\Scripts\python -m amlro_gui.main
+venv\Scripts\python -m amlro_gui.run
+```
 
-Opens at `http://127.0.0.1:5000`.
+Opens at `http://127.0.0.1:5000`. (Installing also registers an `amlro-app`
+console command that does the same thing, once the package is installed.)
 
 `default_exp_dir/` may contain example experiment output
 (config, generated reaction combinations, training/reaction data) from a past
-run.
+run. 
