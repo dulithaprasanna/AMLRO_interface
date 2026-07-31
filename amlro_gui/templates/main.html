@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMLRO Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+        }
+        .cover-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .cover-container img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .card-light-blue {
+            background-color: #98c7e9; /* Soft Blue */
+            color: #154360; /* Dark Blue Text */
+            border: 2px solid #A3CBE3; /* Matching Border */
+        }
+
+        .card-light-blue:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cover Image Section -->
+    <div class="cover-container">
+        <div class="cover-text">AMLRO - Active Machine Learning Reaction Optimizer</div>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <div class="container text-center mt-5">
+    </br>
+        <h1 class="mb-3">Welcome to AMLRO</h1>
+        <p class="text-muted">An active machine learning optimization tool for reaction conditions.</p>
+
+        <!-- Action Cards -->
+        <div class="row justify-content-center">
+            <!-- Start New Optimization -->
+            <div class="col-md-4">
+                <div class="card shadow-sm card-light-blue">
+                    <div class="card-body">
+                        <h5 class="card-title">Start New Optimization</h5>
+                        <p class="card-text">Start a new optimization workflow.</p>
+                        <a href="/set_mode/new" class="btn btn-primary">Start New Optimization</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Optimization from Old Data -->
+            <div class="col-md-4">
+                <div class="card shadow-sm card-light-blue">
+                    <div class="card-body">
+                        <h5 class="card-title">Optimization from Old Reaction Data</h5>
+                        <p class="card-text">Use existing reaction data to continue optimization.</p>
+                        <a href="/upload_old_data" class="btn btn-primary">Start Optimization</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software Description Section -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <h3>About AMLRO</h3>
+                    <p>AMLRO (Active Machine Learning Reaction Optimizer) is an AI-powered platform designed to optimize reaction conditions efficiently using active learning algorithms. 
+                        It assists chemists in discovering the best experimental conditions with minimal amount of reactions.</p>
+                    <h4>Key Features:</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">📊 Multi-objective optimization</li>
+                        <li class="list-group-item">🤖 AI-driven active learning</li>
+                        <li class="list-group-item">🧪 Open-Loop reaction optimization</li>
+                        <li class="list-group-item">⚡ Fast optimal reaction design</li>
+                        <li class="list-group-item">📁 Supports historical reaction data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author & Links -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h4>Developed By:</h4>
+                    <p><strong>Dulitha Prasanna</strong></p>
+                    <p>For more information, visit:</p>
+                    <a href="https://github.com/" class="btn btn-outline-dark" target="_blank">GitHub Repository</a>
+                    <a href="https://yourwebsite.com" class="btn btn-outline-primary" target="_blank">Official Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

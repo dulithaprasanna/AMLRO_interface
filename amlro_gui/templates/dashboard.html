@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMLRO Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">AMLRO Dashboard</h1>
+        <div class="row justify-content-center">
+            <!-- Reaction Scope Panel -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 1: Generate Reaction Scope</h5>
+                        <p class="card-text">Generate the scope of reactions to optimize.</p>
+                        <button onclick="location.href='/reaction_scope'" class="btn btn-primary" {{ 'disabled' if progress.reaction_scope else '' }}>
+                            Start Step
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Set Panel -->
+            {% if optimization_mode == 'new' %}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 2: Generate Training Set</h5>
+                        <p class="card-text">Generate the training set for optimization.</p>
+                        <button onclick="location.href='/start_training'" class="btn btn-primary"{{ 'disabled' if not progress.reaction_scope or progress.training_set else '' }}>
+                            Start Step 
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Optimization Panel -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 3: Perform Optimization</h5>
+                        <p class="card-text">Optimize based on the selected conditions.</p>
+                        <button onclick="location.href='/start_prediction'" class="btn btn-primary" {{ 'disabled' if not (progress.reaction_scope and progress.training_set) and optimization_mode=="new" else '' }}> 
+                            <!-- {{ 'disabled' if not progress.training_set or progress.optimization else '' }} -->
+                            Start Optimization
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

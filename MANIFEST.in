@@ -1,0 +1,2 @@
+recursive-include amlro_gui/static *
+recursive-include amlro_gui/templates *

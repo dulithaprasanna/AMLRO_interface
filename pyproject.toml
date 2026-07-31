@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amlro-gui"
+version = "1.0.0"
+description = "Active Machine Learning Reaction Optimizer GUI"
+authors = [
+  {name = "Dulitha Prasanna"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "flask",
+  "pandas",
+  "numpy",
+  "scikit-learn",
+]
+
+[tool.black]
+line-length = 80
+
+[tool.docstrfmt]
+line_length = 80
+
+[project.urls]
+homepage = "https://github.com/your_repo"
+
+[project.scripts]
+amlro-app = "amlro_gui.__main__:main"
