@@ -19,5 +19,8 @@ dist/
 .idea/
 Thumbs.db
 .DS_Store
-EOF
 
+# Sample data not meant to be tracked
+defaults_exp_dir/
+default_exp_dir/
+test.ipynb
